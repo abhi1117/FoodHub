@@ -12,6 +12,7 @@ export async function GET(request: NextRequest) {
     const category = searchParams.get('category') || undefined;
     const search = searchParams.get('search') || undefined;
 
+    // ✅ Validate query
     const queryValidation = menuItemQuerySchema.safeParse({
       category,
       search,
@@ -24,8 +25,16 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // ✅ Fix TypeScript issue
+    const validCategories = ['appetizer', 'main', 'dessert', 'beverage'];
+
+    const categoryParam = validCategories.includes(category || '')
+      ? (category as typeof validCategories[number])
+      : undefined;
+
+    // ✅ THIS WAS MISSING
     const menuItems = await menuService.getAllMenuItems({
-      category,
+      category: categoryParam,
       search,
     });
 
