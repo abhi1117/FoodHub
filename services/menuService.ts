@@ -7,9 +7,9 @@ export class MenuService {
   async getAllMenuItems(query: MenuItemQuery = {}) {
     const filter: Record<string, any> = {};
 
-    if (query.category && query.category !== 'all') {
-      filter.category = query.category;
-    }
+  if (query.category) {
+  filter.category = query.category;
+}
 
     if (query.search && query.search.trim() !== '') {
       filter.$or = [
