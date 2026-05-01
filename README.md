@@ -2,14 +2,6 @@
 
 A production-grade full-stack food delivery application built with Next.js 14+ (App Router), TypeScript, MongoDB, and real-time Socket.io integration.
 
-![Next.js](https://img.shields.io/badge/Next.js-14+-000000?style=flat&logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat&logo=typescript)
-![MongoDB](https://img.shields.io/badge/MongoDB-8.x-47A248?style=flat&logo=mongodb)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-38B2AC?style=flat&logo=tailwind-css)
-![Socket.io](https://img.shields.io/badge/Socket.io-4.x-000000?style=flat&logo=socket.io)
-![Zustand](https://img.shields.io/badge/Zustand-5.x-000000?style=flat)
-![Jest](https://img.shields.io/badge/Jest-30.x-C21325?style=flat&logo=jest)
-
 ## 🚀 Features
 
 - **Menu Management**: Browse food items with category filtering and search
@@ -711,5 +703,6 @@ Built with ❤️ by GitHub Copilot
 - [Documentation](./docs/)
 - [API Reference](#-api-endpoints)
 - [Contributing](./CONTRIBUTING.md)
-- [License](./LICENSE)#   F o o d H u b  
+- [License](./LICENSE)#   F o o d H u b 
+ 
  
