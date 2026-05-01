@@ -26,11 +26,11 @@ export async function GET(request: NextRequest) {
     }
 
     // ✅ Fix TypeScript issue
-    const validCategories = ['appetizer', 'main', 'dessert', 'beverage'];
+const validCategories = ['appetizer', 'main', 'dessert', 'beverage'] as const;
 
-    const categoryParam = validCategories.includes(category || '')
-      ? (category as typeof validCategories[number])
-      : undefined;
+const categoryParam = validCategories.includes(category as 'appetizer' | 'main' | 'dessert' | 'beverage')
+  ? (category as typeof validCategories[number])
+  : undefined;
 
     // ✅ THIS WAS MISSING
     const menuItems = await menuService.getAllMenuItems({
